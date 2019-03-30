@@ -1,0 +1,12 @@
+test_@:
+	@echo "test the @rm for unexisting files"
+	@rm unexisting_files
+	@echo "echoing after the failure"
+test_-:
+	@echo "testing the '-rm' for unexisting files"
+	-rm unexisting_files
+	@echo "echoing after the failure"
+test_:
+	@echo "testing the 'rm' for unexisting files"
+	rm unexisting_files
+	@echo "echoing after the failure"

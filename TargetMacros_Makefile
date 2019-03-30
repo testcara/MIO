@@ -1,0 +1,5 @@
+OBJ1 = programA.o
+
+target_macro_1: OBJ1 = programB.o
+target_macro_1:
+	echo ${OBJ1}

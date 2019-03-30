@@ -1,0 +1,12 @@
+OBJS_1 = ProgramA.o ProgramB.o ${OBJS_2}
+OBJS_2 = ProgamC.o ProgramD.o
+OBJS_3 := ProgamE.o ProgramF.o ${OBJS_4}
+OBJS_4 = ProgramG.o ProgramH.o ${OBJS_2}
+override OBJS_5 := ProgramI.o ${OBJS_4}
+
+macro_1:
+	echo ${OBJS_1}
+macro_2:
+	echo ${OBJS_3}
+macro_3:
+	echo ${OBJS_5}
