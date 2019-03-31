@@ -1,0 +1,14 @@
+.PHONY : all
+all : get_src get_obj
+names = a b c d
+objects = $(foreach name,${names},${name}.o)
+sources = ${foreach name,${names},${name}.c}
+
+get_src:
+	@echo "---> Get src ..."
+	@echo ${sources}
+
+get_obj:
+	@echo "---> Get obj ..."
+	@echo ${objects}
+

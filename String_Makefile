@@ -1,0 +1,61 @@
+.PHONY : all
+all: check_subst check_patsubst check_strip \
+	check_findstring check_filter check_filter-out \
+	check_sort check_word check_wordlist check_words \
+	check_lastword check_firstword
+
+check_subst:
+	@echo "---> Replace EE to ee in tEEnager"
+	@echo $(subst EE,ee, tEEnager)
+
+check_patsubst:
+	@echo "---> Replace .c to .o in a.c b.c..."
+	@echo $(patsubst %.c, %.o,a.c b.c)
+
+check_strip:
+	@echo "---> Strip  strip  to strip ..."
+	@echo $(strip  strip  )
+
+check_findstring:
+	@echo "---> Find a in aganda ..."
+	@echo $(findstring a, aganda)
+	@echo "---> Find b in aganda ..."
+	@echo $(findstring b, aganda)
+
+check_filter:
+	@echo "---> Filter .c in a.c b.o ..."
+	@echo $(filter %.c, a.c b.o)
+	@echo "---> Filter .h in a.c b.o ..."
+	@echo $(filter %.h, a.c b.o)
+
+check_filter-out:
+	@echo "---> Filter other content except .c in a.c b.o ..."
+	@echo $(filter-out %.c, a.c b.o)
+	@echo "---> Filter other content except .h in a.c b.o ..."
+	@echo $(filter-out %.h, a.c b.o)
+
+check_sort:
+	@echo "---> Sort z y a b ..."
+	@echo $(sort z y a b)
+
+check_word:
+	@echo "---> Get the 5th words of the I am one pretty girl ..."
+	@echo $(word 5, I am one pretty girl)
+
+check_wordlist:
+	@echo "---> Get all words from 2 to 5 ... "
+	@echo $(wordlist 2, 5, I am cara and I do not have a dog)
+
+check_words:
+	@echo "---> Get the count of a ..."
+	@echo $(words a, They all like cara and cara also like them)
+
+check_firstword:
+	@echo "---> Get world of 'Hello World'"
+	@echo $(firstword Hello World)
+
+
+check_lastword:
+	@echo "---> Get world of 'Hello World'"
+	@echo $(lastword Hello World)
+

@@ -1,0 +1,11 @@
+.PHONY : all
+all: check_warning check_info check_error
+
+check_error:
+	$(error 'Error happened, existing')
+
+check_warning:
+	$(warning 'Warning happened, going on')
+
+check_info:
+	$(info 'Info happened, going on')

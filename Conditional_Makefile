@@ -1,0 +1,32 @@
+.PHONY : all
+all: check_ifeq check_ifdef check_ifndef check_ifneq
+
+VAR_1 = FAILED
+VAR_3 = SUCCESS
+
+check_ifeq:
+ifeq ("FAILED", "${VAR_1}")
+	@echo "ifeq: ${VAR_1} is 'FAILED'"
+else
+	@echo "ifeq: ${VAR_1} is not 'FAILED'"
+endif
+
+check_ifdef:
+ifdef VAR_3
+	@echo "ifdef: VAR_3 has been defined"
+else
+	@echo "ifdef: VAR_3 has not been defined"
+endif
+
+check_ifndef:
+ifndef VAR_2
+	@echo "ifndef: VAR_2 has not been defined"
+else
+	@echo "ifndef: VAR_2 has been defined"
+endif
+
+check_ifneq:
+ifneq ("FAILED", "${VAR_3}")
+	@echo "ifneq: ${VAR_3} is not 'FAILED'"
+endif
+

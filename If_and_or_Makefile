@@ -1,0 +1,18 @@
+.PHONY : all
+true = 1
+
+all: check_if check_or check_and
+
+check_if:
+	@echo "---> Check if ..."
+	@echo $(if ${true},${true})
+	@echo $(if ${false},${false},${true})
+
+check_or:
+	@echo "---> Check or ..."
+	@echo $(or ${true}, ${false})
+
+check_and:
+	@echo "---> Check and ..."
+	echo $(and ${true}, ${false})
+

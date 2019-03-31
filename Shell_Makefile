@@ -1,0 +1,7 @@
+.PHONY : all
+all: check_shell
+
+check_shell:
+	@echo $(shell echo "Hello World")
+	@echo "Hello World"
+	@echo `echo Hello World`

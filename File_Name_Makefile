@@ -1,0 +1,44 @@
+.PHONY : all
+all: check_dir check_notdir check_suffix check_basename \
+	 check_addsuffix check_addprefix check_join check_wildcard \
+	 check_realpath check_abspath
+
+check_dir:
+	@echo "---> get dir name of src/file_1 hack ..."
+	@echo $(dir src/file_1 hack)
+
+check_notdir:
+	@echo "---> get file name of src/file_1 hack ..."
+	@echo $(notdir src/file_1 hack)
+
+check_suffix:
+	@echo "---> get the suffix of src/programA.c programA.o ..."
+	@echo $(suffix src/programA.c programA.o)
+
+check_basename:
+	@echo "---> get the basename of src/programA.c programA.o ..."
+	@echo $(basename src/programA.c programA.o)
+
+check_addsuffix:
+	@echo "---> append the suffix to src/programA programA ..."
+	@echo $(addsuffix .c, src/programA programA)
+
+check_addprefix:
+	@echo "---> add the prefix to progamA.c progamA.o ..."
+	@echo $(addprefix src/, progamA.c progamA.o)
+
+check_join:
+	@echo "---> join list 1 and list 2 ..."
+	@echo $(join a b c, d f g)
+
+check_wildcard:
+	@echo "---> get the files matched *_Makefile ..."
+	@echo $(wildcard *_Makefile)
+
+check_realpath:
+	@echo "---> get the realpath of File_Name_Makefile ..."
+	@echo $(realpath File_Name_Makefile)
+
+check_abspath:
+	@echo "---> get the abspath of File_Name_Makefile ..."
+	@echo $(abspath File_Name_Makefile)
