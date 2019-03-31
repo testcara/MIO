@@ -1,6 +1,6 @@
-Unix Makefile入门
+GNU Makefile入门
 ==
-Makefile是一种自动化程序编译工具。它通过定义一系列的编译规则可以处理编译程序之间的依赖，并完成自动化的编译，从而必须重复的手动编译步骤。Unix Makefile可以运行在Unix, Linux等平台上。
+Makefile是一种自动化程序编译工具。它通过定义一系列的编译规则可以处理编译程序之间的依赖，并完成自动化的编译，从而必须重复的手动编译步骤。Makefile可以运行在Unix, Linux等平台上。
 下面我们以一个例子展示如何使用Unix Makefile
 我们有一个非常简单的C程序，如下：
 ```
