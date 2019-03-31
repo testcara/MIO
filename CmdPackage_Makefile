@@ -1,0 +1,8 @@
+define check-files =
+@echo "This is one command package"
+@echo "I am doing things here!"
+@echo "Command package has been completed"
+endef
+
+build:
+	$(check-files)

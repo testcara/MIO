@@ -1,0 +1,26 @@
+.PHONY : all
+all: build_pwd build_if
+
+.ONESHELL:
+build_pwd:
+	@echo "---> all in one shell 1 ..."
+	pwd=$$(pwd)
+	@echo "the current dir is $${pwd}"
+	@echo "---> shell 1 done ..."
+
+build_if:
+	@echo "---> all in shell 2 ..."
+	cd ~
+	if [[ -z "$${pwd}" ]]
+	then
+		@echo "need to get the pwd again"
+		pwd=$$(pwd)
+		@echo "the current dir is $${pwd}"
+	else
+		@echo "the current dir is $${pwd}"
+	fi
+	@echo "---> shell 2 done ..."
+
+
+
+		

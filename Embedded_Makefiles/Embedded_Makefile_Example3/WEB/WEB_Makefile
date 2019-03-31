@@ -1,0 +1,6 @@
+build_web:
+	@echo "---> Make the WEB APP ..."
+	@echo "---> Output VAR_1 & VAR_2 ..."
+	@echo VAR_1: ${VAR_1}
+	@echo VAR_2: ${VAR_2}
+	@echo "---> Done to make WEB APP ..."

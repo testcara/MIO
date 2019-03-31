@@ -1,0 +1,3 @@
+build_web:
+	@echo "---> Make the WEB APP ..."
+	@echo "---> Done to make WEB APP ..."

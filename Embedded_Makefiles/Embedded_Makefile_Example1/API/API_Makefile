@@ -1,0 +1,3 @@
+build_api:
+	@echo "---> Make the API APP ..."
+	@echo "---> Done to make API APP ..."

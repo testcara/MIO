@@ -1,0 +1,6 @@
+build_api:
+	@echo "---> Make the API APP ..."
+	@echo "---> Output VAR_1 & VAR_2 ..."
+	@echo VAR_1: ${VAR_1}
+	@echo VAR_2: ${VAR_2}
+	@echo "---> Done to make API APP ..."

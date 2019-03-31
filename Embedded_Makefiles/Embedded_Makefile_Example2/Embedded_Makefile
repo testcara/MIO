@@ -1,0 +1,8 @@
+.PHONY : all
+all: build
+
+build:
+	@echo "---> Make the whole APP ..."
+	@make -f WEB/WEB_Makefile
+	@make -f API/API_Makefile
+	@echo "---> Done to make the whole APP ..."
